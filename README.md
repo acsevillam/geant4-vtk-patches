@@ -1,16 +1,16 @@
 # Geant4 VTK Black Primary Edges Patch
 
-Clean, shareable patch set for applying the VTK black-primary-edges fixes to a
-virgin Geant4 11.4.1 source tree.
+Clean patch set for Geant4 11.4.1, generated directly from the official
+Geant4 source tree.
 
 ## Scope
 
-This patch updates the Geant4 VTK visualization code to fix two issues:
+This patch set adds black primary-edge rendering to the Geant4 VTK
+visualization backend.
 
-1. Incorrect rigid transforms in `polyhedronPipeline separate` for offset
-   polyhedra, especially noticeable with imported GDML boolean solids.
-2. Incorrect black edge rendering in `polyhedronPipeline tensor` when
-   `/vis/viewer/set/edge true` is enabled.
+It includes the supporting VTK changes required for the new edge-rendering path
+to behave correctly, including proper handling of offset polyhedra in
+`polyhedronPipeline separate`, especially for imported GDML boolean solids.
 
 ## Contents
 
